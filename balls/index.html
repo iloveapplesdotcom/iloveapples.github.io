@@ -36,9 +36,7 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: #ff0;
         transform-style: preserve-3d;
-        animation: rotateSphere 3s linear infinite alternate;
     }
 
     @keyframes rotateCube {
@@ -46,33 +44,34 @@
         to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
     }
 
-    @keyframes rotateSphere {
+    @keyframes rotateSphere1 {
         from { transform: rotateY(0) translateZ(150px); }
         to { transform: rotateY(360deg) translateZ(150px); }
+    }
+
+    @keyframes rotateSphere2 {
+        from { transform: rotateY(0) translateZ(200px); }
+        to { transform: rotateY(360deg) translateZ(200px); }
+    }
+
+    @keyframes rotateSphere3 {
+        from { transform: rotateY(0) translateZ(250px); }
+        to { transform: rotateY(360deg) translateZ(250px); }
+    }
+
+    @keyframes rotateSphere4 {
+        from { transform: rotateY(0) translateZ(300px); }
+        to { transform: rotateY(360deg) translateZ(300px); }
     }
 </style>
 </head>
 <body>
 <div id="container">
     <div id="cube"></div>
-    <div class="sphere" style="transform: rotateY(0) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(45deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(90deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(135deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(180deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(225deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(270deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(315deg) translateZ(150px);"></div>
-    
-    <!-- Additional spheres -->
-    <div class="sphere" style="transform: rotateY(22.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(67.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(112.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(157.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(202.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(247.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(292.5deg) translateZ(150px);"></div>
-    <div class="sphere" style="transform: rotateY(337.5deg) translateZ(150px);"></div>
+    <div class="sphere sphere1" style="transform: rotateY(0) translateZ(150px); background-color: #ff0; animation: rotateSphere1 3s linear infinite alternate;"></div>
+    <div class="sphere sphere2" style="transform: rotateY(45deg) translateZ(200px); background-color: #0f0; animation: rotateSphere2 4s linear infinite alternate;"></div>
+    <div class="sphere sphere3" style="transform: rotateY(90deg) translateZ(250px); background-color: #00f; animation: rotateSphere3 5s linear infinite alternate;"></div>
+    <div class="sphere sphere4" style="transform: rotateY(135deg) translateZ(300px); background-color: #f00; animation: rotateSphere4 6s linear infinite alternate;"></div>
 </div>
 </body>
 </html>
