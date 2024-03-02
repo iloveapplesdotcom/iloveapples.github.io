@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbiting Spheres around a Cube</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #111;
+    }
+
+    #container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        perspective: 1000px;
+    }
+
+    #cube {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        transform-style: preserve-3d;
+        animation: rotateCube 5s linear infinite;
+    }
+
+    .sphere {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff0;
+        transform-style: preserve-3d;
+        animation: rotateSphere 3s linear infinite alternate;
+    }
+
+    @keyframes rotateCube {
+        from { transform: rotateX(0) rotateY(0) rotateZ(0); }
+        to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+    }
+
+    @keyframes rotateSphere {
+        from { transform: rotateY(0) translateZ(150px); }
+        to { transform: rotateY(360deg) translateZ(150px); }
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="cube"></div>
+    <div class="sphere" style="transform: rotateY(0) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(45deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(90deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(135deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(180deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(225deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(270deg) translateZ(150px);"></div>
+    <div class="sphere" style="transform: rotateY(315deg) translateZ(150px);"></div>
+</div>
+</body>
+</html>
 
